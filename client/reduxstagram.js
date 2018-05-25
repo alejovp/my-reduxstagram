@@ -14,6 +14,14 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 
+import Raven from 'raven-js';
+import { sentry_url } from './data/config';
+
+// catch all the errors in the user console and send it
+Raven.config(sentry_url).install();
+
+console.log(window.doesNotExist.nope);
+
 const router = (
     <Provider store={store}>
         <Router history={history}>

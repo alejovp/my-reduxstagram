@@ -1,8 +1,8 @@
 import Raven from 'raven-js';
 
-const sentry_key = 'cb55d4f05cd443ce82303222f77ef5e0';
-const sentry_app = '61499';
-export const sentry_url = `https://${sentry_key}@app.getsentry.com/${sentry_app}`;
+const sentry_key = '427ceaec1d724a8695e47fc8b6ead603';
+const sentry_app = '1212892';
+export const sentry_url = `https://${sentry_key}@sentry.io/${sentry_app}`;
 
 export function logException(ex, context) {
   Raven.captureException(ex, {
